@@ -26,8 +26,8 @@ export default {
   data () {
     return {
       formData: {
-        username: '',
-        password: ''
+        username: 'admin',
+        password: '123456'
       },
       rules: {
         username: [
@@ -42,21 +42,12 @@ export default {
     }
   },
   methods: {
-    //   (valid) => {
-    //     if (valid) {
-    //       alert('submit!');
-    //     } else {
-    //       console.log('error submit!!');
-    //       return false;
-    //     }
-    //   }
     onSubmit (formName) {
       this.$refs[formName].validate(async (valid) => {
         if (!valid) {
           return ;
         } else {
           const { data:res } = await this.$http.post('login', this.formData)
-          console.log(res)
           if (res.meta.status === 200) {
             this.$message({
               showClose: true,

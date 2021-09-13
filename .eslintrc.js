@@ -24,7 +24,12 @@ module.exports = {
     'indent': 'off',
     'keyword-spacing': 'off',
     'eqeqeq': 'off',
-    'space-before-blocks': 'off'
+    'space-before-blocks': 'off',
+    'quote-props': 'off',
+    'no-unused-vars': 'off',
+    'padded-blocks': 'off',
+    'no-unused-vars': 'off',
+    'vue/no-unused-vars': 'off',
   },
   overrides: [
     {
